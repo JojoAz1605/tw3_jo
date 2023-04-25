@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<head>
+    <title>Agenda</title>
+    <link href="https://www.w3schools.com/w3css/4/w3.css" rel="stylesheet">
+</head>
+<?php
+
+$corps =<<<EOT
+<html>
+<body>
+<form action="index.php?action={$cible}&idP={$idP}" method="post" name="form_user">
+    <label>Nom</label>
+    <input name="nom" size="" type="text" value="{$nom}">
+    <span class="w3-text-red">{$erreur["nom"]}</span><br/>
+
+    <label>Prénom</label>
+    <input name="prenom" size="" type="text" value="{$prenom}">
+    <span class="w3-text-red">{$erreur["prenom"]}</span><br/>
+
+    <label>Date de naissance</label>
+    <input name="dateN" size="" type="date" value="{$dateN}">
+    <span class="w3-text-red">{$erreur["dateN"]}</span><br/>
+
+    <label>Numéro de téléphone</label>
+    <input name="telephone" size="" type="text" value="{$telephone}">
+    <span class="w3-text-red">{$erreur["telephone"]}</span><br/>
+
+    <label>Adresse</label>
+    <input name="adresse" size="" type="text" value="{$adresse}">
+    <span class="w3-text-red">{$erreur["adresse"]}</span><br/>
+
+    <input name="user_valider" size="" type="submit" value="Valider">
+
+</form>
+</body>
+</html>
+EOT;
+$zonePrincipale=$corps ;
+?>
